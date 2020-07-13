@@ -1,0 +1,9 @@
+app.component.ts=======================
+firstname: string = 'Devesh';
+app.component.html===================
+
+<span [innerHTML]='title'></span>
+<br>
+First name: <span [innerHTML]='firstname'></span>
+
+<img [src]="'https://angular.io/assets/images/logos/angular/angular.svg'" [height]="200" alt="d">
