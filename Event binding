@@ -1,0 +1,20 @@
+url ====================https://www.youtube.com/watch?v=pZgWsyWnpYc&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=26
+app.component.ts====================================
+export class AppComponent {
+  title = 'Sahosoft Sollution!';
+  
+  constructor() {}
+
+  showdata(){
+    console.log("Sahosoft Sollution!")
+  }
+
+
+  show(){
+    alert("Jio");
+  }
+  }
+  app.component.html====================================
+  <h1>Welcome to {{title}}</h1>
+<button (click)="showdata()">Click</button>
+<button (click)="show()">show</button>
