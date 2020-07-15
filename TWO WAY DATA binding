@@ -1,0 +1,12 @@
+url ====================https://www.youtube.com/watch?v=819L-majq6Y&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=27
+app.component.ts====================================
+export class AppComponent {
+  title = 'Sahosoft Sollution!';
+    data: string = 'Devesh';
+  constructor() {}
+}
+ app.component.html====================================
+ 
+<h1>Welcome to {{title}}</h1>
+Enter Your Name: <input [value]='data' (input)='data=$event.target.value'> <br>
+Your Name : {{data}}
