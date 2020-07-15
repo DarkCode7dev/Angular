@@ -1,0 +1,24 @@
+url ====================https://www.youtube.com/watch?v=819L-majq6Y&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=27
+app.module.ts=========================
+import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
+
+ imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CompanyModule,
+    FormsModule
+  ]
+  
+  app.component.ts====================================
+  
+export class AppComponent {
+  title = 'Sahosoft Sollution!';
+    data: string = 'Devesh';
+
+    data1: string = 'Batman';
+  constructor() {}
+}
+ app.component.html====================================
+<input [(ngModel)]='data1'>
+Entered value : {{data1}}
