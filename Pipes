@@ -1,0 +1,42 @@
+url==============https://www.youtube.com/watch?v=oDgVgEeaJ9k&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=28
+app.componenet.ts=====================
+
+export class AppComponent {
+  title = 'Sahosoft Sollution!';
+   constructor() {}
+   employees: any[] = [
+     {
+       code: 'emp001', name: 'Dev' , salary: '85000' , dob: '02/aug/1999'
+     },
+     {
+      code: 'emp002', name: 'Rahul' , salary: '85000' , dob: '02/aug/1995'
+    },
+    {
+      code: 'emp003', name: 'Moni' , salary: '85000' , dob: '02/aug/1998'
+    },
+    {
+      code: 'emp004', name: 'Sonu' , salary: '85000' , dob: '02/aug/1999'
+    },
+    {
+      code: 'emp005', name: 'Ajeet' , salary: '85000' , dob: '02/aug/1997'
+    }
+   ];
+}
+
+app.component.html=============================
+
+<h1>Welcome to {{title}}</h1>
+<table border="1">
+    <tr>
+        <th>Emp Code</th>
+        <th>Emp Name</th>
+        <th>Salary</th>
+        <th>Dob</th>
+    </tr>
+    <tr *ngFor="let emp of employees">
+        <td>{{emp.code}}</td>
+        <td>{{emp.name | uppercase}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.dob}}</td>
+    </tr>
+</table>
