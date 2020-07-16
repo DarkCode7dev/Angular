@@ -1,0 +1,25 @@
+url==============https://www.youtube.com/watch?v=2Qs5HTmbqG8&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=29
+app.componenet.ts=====================
+
+export class AppComponent {
+  title = 'Sahosoft Sollution!';
+   constructor() {}
+  
+   dob = new Date(1996, 8, 15);
+
+    salary: number = 65000;
+}
+
+app.component.html=============================
+
+<h1>Welcome to {{title}}</h1>
+{{dob}} <br>
+Medium : {{dob| date:"medium"}} <br>
+Specific format : {{dob| date:"dd/MM/yyyy"}}
+
+<br>
+medium time : {{dob|date:"mediumTime"}}
+<br>
+Salary : {{salary|currency:"USD":true}}
+<app-test></app-test>
+<router-outlet></router-outlet>
