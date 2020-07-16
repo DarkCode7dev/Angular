@@ -1,0 +1,13 @@
+url==============https://www.youtube.com/watch?v=cejncBV5qr4&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=32
+app.componenet.ts=====================
+export class AppComponent {
+  title = 'Sahosoft Sollution!';
+   constructor() {}
+   currentdate = new Date();
+}
+app.component.html=============================
+<h3>{{currentdate}}</h3>
+<h3>{{currentdate|date:'shortDate'}}</h3>
+<h3>{{currentdate|date:'longDate'}}</h3>
+<h3>{{currentdate|date:'fullDate'}}</h3>
+<app-test></app-test>
