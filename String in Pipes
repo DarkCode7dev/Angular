@@ -1,0 +1,20 @@
+url==============https://www.youtube.com/watch?v=WEh8eoiRTQ4&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=31
+app.componenet.ts=====================
+
+export class AppComponent {
+  title = 'Sahosoft Sollution!';
+   constructor() {}
+   name: string = "Rahul";
+   position:string = "software Developer";
+   work: string = "software Developer";
+}
+
+app.component.html=============================
+
+<h1>Welcome to {{title}}</h1>
+<h4>{{name|uppercase}}----{{position|lowercase}}</h4>
+<h3>{{work|titlecase}}</h3>
+
+<h4>slice example</h4>
+<h3>{{work|slice:5}}</h3>
+<h3>{{work|slice:5:9}}</h3>
