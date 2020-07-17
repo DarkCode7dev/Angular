@@ -1,0 +1,17 @@
+url========================https://www.youtube.com/watch?v=cejncBV5qr4&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=32
+
+app.componenet.ts=====================
+
+export class AppComponent {
+  title = 'Sahosoft Sollution!';
+   constructor() {}
+  
+   mynumber: number = 0.12453334;
+   
+}
+app.component.html=============================
+
+<h1>Welcome to {{title}}</h1>
+<h3>{{mynumber}}</h3>
+<h3>{{mynumber|percent}}</h3>
+<h3>{{mynumber|percent:'2.4-8'}}</h3>
