@@ -1,0 +1,39 @@
+url=================https://www.youtube.com/watch?v=Vuj3uRWOHhc&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=34
+app.componenet.ts=====================
+export class AppComponent {
+  title = 'DEVESH Sollution!';
+   constructor() {}
+  employees: any = [
+    {code: 1, name: 'Soni1', gender: 'female' , salary: 45000},
+    {code: 2, name: 'Soni2', gender: 'female' , salary: 45000},
+    {code: 3, name: 'Rahul', gender: 'male' , salary: 45000},
+    {code: 4, name: 'Soni4', gender: 'female' , salary: 45000}
+  ];
+}
+app.component.html=============================
+
+<table border="1">
+<tr *ngFor="let employee of employees">
+  <td>{{employee.code}}</td>
+  <td>{{employee.name|mypipe:employee.gender}}</td>
+  <td>{{employee.gender}}</td>
+  <td>{{employee.salary}}</td>
+   </tr>
+</table>
+mypipe.pipe.ts=================================
+
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'mypipe'
+})
+export class MypipePipe implements PipeTransform {
+
+  transform(value: string, gender: string): unknown {
+    if(gender.toLowerCase()=="male")
+    return "Mr."+value;
+    else
+    return "miss."+value;
+  }
+
+}
