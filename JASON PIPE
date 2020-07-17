@@ -1,0 +1,18 @@
+url=====================https://www.youtube.com/watch?v=G3DN5thwtQk&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=33
+app.componenet.ts=====================
+export class AppComponent {
+  title = 'DEVESH Sollution!';
+   constructor() {}
+  public employees = [
+    {"id": 1, "name": "Rahul1" },
+    {"id": 2, "name": "Rahul2" },
+    {"id": 3, "name": "Rahul3" },
+    {"id": 4, "name": "Rahul4" },
+  ];
+}
+app.component.html=============================
+<div>
+    {{employees}} <br> <br>
+  using json:   {{employees|json}} <br> <br>
+   USING SLICE: {{employees|slice:1:3|json}}
+</div>
