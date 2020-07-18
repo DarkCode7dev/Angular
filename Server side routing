@@ -1,0 +1,25 @@
+url================================https://www.youtube.com/watch?v=JGrGGFO78Mk&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=38
+app.component.html=============================
+<button (click)="student()">show student</button>
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+app-routing.module.ts========================================
+const routes: Routes = [
+  {
+    path: '' , redirectTo:'student' , pathMatch: 'full'
+  },
+  {
+    path: 'student', component: StudentComponent
+  },
+  {
+    path: 'studentdetails', component: StudentdetailsComponent
+  }
+];
+app.component.ts===================================
+  constructor(private router: Router) {}
+
+   student(){
+     this.router.navigate(['/student']);
+   }
