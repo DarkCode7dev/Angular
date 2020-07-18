@@ -3,7 +3,9 @@ app.component.html=============================
 <a [routerLink]="['/student']">Student</a>
 ,<br>
 <a [routerLink]="['/studentdetails']">Studentdetails</a>
-
+<div>
+  <router-outlet></router-outlet>
+</div>
 
 app-routing.module.ts========================================
 const routes: Routes = [
