@@ -1,0 +1,46 @@
+url=================https://www.youtube.com/watch?v=wsUYJaH-SQc&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=44
+app.componenet.ts=====================
+export class AppComponent {
+  title = 'DEVESH Sollution!';
+    ngOnInit(){
+
+    }
+
+    Register(regForm){
+      debugger;
+      var firstname = regForm.controls.firstname.value;
+      var lastname = regForm.controls.lastname.value;
+      var email = regForm.controls.email.value;
+      console.log(regForm);
+    }
+
+}
+
+
+app.component.html=============================
+
+<h1>Welcome to {{title}}</h1>
+<div class="container">
+  <div class="row">
+    <div class="form-bg">
+      <form #regForm='ngForm' (ngSubmit)="Register(regForm)">
+        <h2 class="text-center">Registeration Page</h2>
+        <br>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="First Name" name="firstname" required ngModel>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Last Name" name="lastname" required ngModel>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Email Id" name="email" email required ngModel #email="ngModel">
+          <span class="help-bpx" *ngIf="email.touched && !email.valid">Please enter valid email value</span>
+        </div>
+        <br>
+        <div class="align-center">
+          <button type="submit" class="btn btn-primary" id="Register" [disabled]="!regForm.valid">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
