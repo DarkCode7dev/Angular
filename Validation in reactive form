@@ -1,0 +1,78 @@
+url==============https://www.youtube.com/watch?v=LDKDh7Z1vBY&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=46
+app.componenet.ts=====================
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import {FormControl, FormGroup , FormBuilder, NgForm, Validator, Validators} from '@angular/forms';
+
+
+@Component({
+  selector: 'app-root',
+ templateUrl: './app.component.html',
+
+  styleUrls: ['./app.component.css'],
+  preserveWhitespaces: true
+
+})
+
+export class AppComponent {
+  title = 'DEVESH Sollution!';
+  
+  signupForm: FormGroup;
+  FirstName: string = '';
+  LastName: string = '';
+  Email: string  = '';
+  Password: string = '';
+
+  constructor(private frmbuilder: FormBuilder) {
+    this.signupForm = frmbuilder.group({
+      fname: ['', Validators.required] ,
+      lname:  ['', [Validators.required, Validators.maxLength(10)]] ,
+      Emailid: [' ', [Validators.required,Validators.email ]],
+      userpassword :  ['', Validators.required]
+    });
+  }
+   ngOnInit(){}
+
+    PostData(signupForm: any){
+      this.FirstName = signupForm.controls.fname.value;
+      this.LastName = signupForm.controls.lname.value;
+      this.Email = signupForm.controls.Emailid.value;
+      console.log(this.FirstName);
+      console.log(signupForm.controls);
+    }
+}
+app.component.html=============================
+
+<h1>Welcome to {{title}}</h1>
+<div class="container">
+  <div class="row">
+    <div class="form-bg">
+      <form [formGroup]='signupForm' (ngSubmit)="PostData(signupForm)">
+       <div class="form-group">
+          <br>
+          <input type="text" formControlName='fname' placeholder="Your First name"> 
+          <span *ngIf="signupForm.controls['fname'].hasError('required')">First Name is required</span>
+        </div>
+        <div class="form-group">
+          <br>
+          <input type="text" formControlName='lname' placeholder="Your Last name">
+           <span *ngIf="signupForm.controls['lname'].hasError('required')">Your Last name is required</span>
+        </div>
+        <div class="form-group">
+          <br>
+          <input type="text" formControlName='Emailid' placeholder="Your Email id">
+           <span *ngIf="signupForm.controls['Emailid'].hasError('required')">Your Email id is required</span>
+        </div>
+        <div class="form-group">
+          <br>
+          <input type="Password" formControlName='userpassword' placeholder="Your password">
+           <span *ngIf="signupForm.controls['userpassword'].hasError('required')">Your password is required</span>
+        </div>
+        <br>
+        <div class="align-center">
+          <input type="submit" [disabled]='!signupForm.valid' class="btn btn-primary" id="PostData" value="PostData">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
