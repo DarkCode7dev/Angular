@@ -1,0 +1,59 @@
+url=====================https://www.youtube.com/watch?v=8Mexsy3dZuc&list=PL_qizAfcpJ-OzHcVcH_K7jZHHp4LqKVob&index=51
+app.component.ts==============
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import {FormControl, FormGroup , FormBuilder, NgForm, Validator, Validators,FormArray, FormArrayName } from '@angular/forms';
+import { formsignup } from './formsignup';
+
+
+@Component({
+  selector: 'app-root',
+ templateUrl: './app.component.html',
+
+  styleUrls: ['./app.component.css'],
+  preserveWhitespaces: true
+
+})
+
+export class AppComponent {
+  title = 'DEVESH Sollution!';
+ FormGroup: FormGroup;
+
+ form: any;
+
+  constructor() {}
+  
+   ngOnInit(): void{
+     this.form = new FormGroup({
+      ContactNos: new FormArray([
+        new FormControl('987456123'),
+        new FormControl('895641230'),
+      ])
+     });
+   }
+  
+   addContactNo(){
+     this.form.get('ContactNos').push(new FormControl());
+   }
+
+   onSubmit(){
+     console.log(this.form.get('ContactNos').value);
+     console.log(this.form.value);
+   }
+   setPreset(){
+     this.form.get('ContactNos').patchValue(['123456789','9874556412']);
+   }
+
+}
+app.component.html=======================
+<h1>Welcome to {{title}}</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div formArrayName="ContactNos">
+      <div *ngFor="let contact of form.controls.ContactNos.controls; index as i">
+          <input [formControlName]="i" placeholder="Contact No">
+      </div>
+  </div>
+  <button>Submit</button>
+</form>
+<button (click)="addContactNo()">Add New Contact No</button>
+<button (click)="setPreset()">Set preset</button>
