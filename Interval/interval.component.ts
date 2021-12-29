@@ -28,5 +28,9 @@ export class IntervalComponent implements OnInit {
 
     })
   }
-
+/*print(val, containerId){
+  let el = document.createElement('li');
+  el.innerText = val;
+  document.getElementById(containerId).appendChild(el)
+}*/
 }
