@@ -1,0 +1,31 @@
+ul.techlist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul.techList
+li {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 7px 13px;
+    margin-bottom: 10px;
+}
+
+ul.techlist.error li {
+    
+    color: red;
+    background: #ff000052;
+    border-color: red;
+
+}
+
+ul.techlist.completed li {
+  color: rgb(15 255 0);
+    background: #00ff405e;
+    border-color: rgb(0, 255, 13);
+}
+
+
+
+
