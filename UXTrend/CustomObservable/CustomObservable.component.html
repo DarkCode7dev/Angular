@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <div class="my-3">
   <h2>Custom Observable</h2>
   <div class="row">
@@ -5,17 +6,15 @@
       <strong>Ex -01 (Manual)</strong>
       
       <hr>
-      <ul class="techlist error">
-        <li>Angular</li>
-        <li>Typescript</li>
-        <li>Html and css</li>
+      <ul class="techlist" id="elContainer"  [ngClass]="techStatus =='completed'? 'completed' : techStatus =='error'? 'error' : ''" > 
+        
       </ul>
     </div>
      <div class="col-md-6">
       <strong>Ex -02(Custom Interval Observable)</strong>
       
       <hr>
-      <ul class="techlist completed">
+      <ul class="techlist">
         <li>Angular</li>
         <li>Typescript</li>
         <li>Html and css</li>
@@ -24,6 +23,12 @@
   </div>
   <br>
   <div class="row">
-    <div class="COL-md-12"></div>
+    <div class="COL-md-12">
+      <strong>Ex-03 (Random Names)</strong>
+       <p class="bg-light py-2 px-3 border rounded" > 
+     <strong>Random Names:</strong> 'Anup','Shekhar','Sharma','Uxtrendz','John','Alex','Robert'
+     </p> <hr>
+     <p>Current Name : <strong class="text-success">Anup</strong><span class="badge badge-success">Success</span></p>
+    </div>
   </div>
 </div>
