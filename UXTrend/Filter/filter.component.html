@@ -1,0 +1,74 @@
+<<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<div class="my-3">
+  <h2>Filter</h2>
+  <br>
+  <div class="row">
+    <div class="col-md-4">
+      <strong>Ex-01
+        <hr>
+        <p class="bg-light py-2 px-3 border rounded">
+          <strong>Filter:  </strong> by  length
+        </p>
+        <br>
+        <table class="table">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+          </tr>
+          <tr *ngFor="let item of data">
+            <td>{{item.id}}</td>
+             <td>{{item.name}}</td>
+          </tr>
+        </table>
+        <p>Messages <strong class="text-success"></strong></p>
+      </strong>
+    </div>
+        <div class="col-md-4">
+      <strong>Ex-02
+        <hr>
+        <p class="bg-light py-2 px-3 border rounded">
+          <strong>Filter:  </strong> by  Gender
+        </p>
+        <br>
+        <table class="table">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+          </tr>
+         <tr *ngFor="let item of data2">
+            <td>{{item.id}}</td>
+             <td>{{item.name}}</td>
+              <td>{{item.gender}}</td>
+          </tr>
+        </table>
+        <p>Messages <strong class="text-success"></strong></p>
+      </strong>
+    </div>
+
+     <div class="col-md-4">
+      <strong>Ex-03
+        <hr>
+        <p class="bg-light py-2 px-3 border rounded">
+          <strong>Filter:  </strong> by  nth Item
+        </p>
+        <br>
+         <table class="table">
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+          </tr>
+         <tr *ngFor="let item of data3">
+            <td>{{item.id}}</td>
+             <td>{{item.name}}</td>
+              <td>{{item.gender}}</td>
+          </tr>
+        </table>
+        <p>Messages <strong class="text-success"></strong></p>
+      </strong>
+    </div>
+
+  </div>
+</div>
