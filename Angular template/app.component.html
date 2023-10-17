@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="toggleSidenav()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+</mat-toolbar>
+
+<mat-drawer-container class="drawer-container">
+  <mat-drawer #sidenav mode="side" opened="{{ sidenavOpened }}">
+    <!-- Content for side navigation -->
+    <ul>
+      <li><a href="#">Menu Item 1</a></li>
+      <li><a href="#">Menu Item 2</a></li>
+      <li><a href="#">Menu Item 3</a></li>
+    </ul>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <!-- Main content of your application -->
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
