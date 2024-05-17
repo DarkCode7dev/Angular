@@ -18,3 +18,45 @@ Authentication: Attach authentication tokens to requests or refresh tokens autom
 Error Handling: Centralize error-handling logic and respond consistently to errors.
 Logging: Log requests, responses, or errors for debugging and monitoring.
 Loading Indicators: Start and stop loading indicators during HTTP requests for a smoother user experience.
+
+=>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<========
+Difference between Promise and Observable ?Which one is better to use ?
+
+Ans=>
+Promise is eager-loaded where as observable is lazy-loaded.
+Promise emit single value where as Observable can emit multiple values.
+Promise can not be unsubscribed where as Observable can be unsubscribed.
+
+Observable can be preferred over promise since it can be unsubscribed and lazy-loaded and only emit value once it gets subscribed, so performance benefit of using observable.
+
+
+
+
+Promise===>>>>>>>>>
+Eager Execution: A Promise starts executing immediately when it is created.
+
+Single Value: A Promise can resolve or reject with a single value.
+
+Not Cancelable: Once a Promise is started, it cannot be canceled.
+
+Simpler Syntax: Promises have a simpler syntax using .then() for handling fulfilled values and .catch() for handling errors.
+
+Built-in JavaScript Feature: Promises are a part of the ES6 (ECMAScript 2015) standard and are built into JavaScript.
+
+
+Observable===>>>
+Lazy Execution: An Observable does not start executing until it is subscribed to.
+
+Multiple Values: An Observable can emit multiple values over time.
+
+Cancelable: Observables can be canceled (unsubscribed) at any time to stop receiving values and free resources.
+
+Powerful Operators: Observables come with a wide range of operators from RxJS (Reactive Extensions for JavaScript) for transforming, filtering, and combining streams of data.
+
+More Complex: Observables have a more complex API but offer more flexibility and power.
+
+
+
+
+
+
